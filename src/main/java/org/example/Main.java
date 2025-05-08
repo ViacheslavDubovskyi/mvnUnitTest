@@ -5,7 +5,6 @@ public class Main {
 
         String jewels = "aA";
         String stones = "aAAbbbb";
-
         JewelsAndStones testJewels = new JewelsAndStones();
         System.out.println(testJewels.calc(jewels, stones));
 
@@ -13,10 +12,9 @@ public class Main {
         NumberOfPairs testNum = new NumberOfPairs();
         System.out.println(testNum.calc(nums));
 
-        final String word = "balloon";
         String text = "loonbalxballpoon";
-
         MaxBalloons testBalloons = new MaxBalloons();
+        testBalloons.calc(text);
 
     }
 }
