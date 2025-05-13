@@ -21,6 +21,6 @@ public class MaxBalloons {
         int o = textChars.getOrDefault('o', 0) / 2;
         int n = textChars.getOrDefault('n', 0);
 
-        return Math.min(b, Math.min(a, Math.min(l, Math.min(l, Math.min(o, n)))));
+        return Math.min(b, Math.min(a, Math.min(l, Math.min(o, n))));
     }
 }
