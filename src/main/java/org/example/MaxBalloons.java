@@ -10,23 +10,17 @@ public class MaxBalloons {
         }
         HashMap<Character, Integer> textChars = new HashMap<>();
 
-        textChars.put('b', 1);
-        textChars.put('a', 1);
-        textChars.put('l', 1);
-        textChars.put('o', 1);
-        textChars.put('n', 1);
-
         char[] chars = text.toLowerCase().toCharArray();
         for (char c : chars) {
             textChars.put(c, textChars.getOrDefault(c, 0) + 1);
         }
 
-        int b = textChars.get('b');
-        int a = textChars.get('a');
-        int l = textChars.get('l');
-        int o = textChars.get('o');
-        int n = textChars.get('n');
+        int b = textChars.getOrDefault('b', 0);
+        int a = textChars.getOrDefault('a', 0);
+        int l = textChars.getOrDefault('l', 0) / 2;
+        int o = textChars.getOrDefault('o', 0) / 2;
+        int n = textChars.getOrDefault('n', 0);
 
-        return Math.min(b, Math.min(a, Math.min(n, Math.min(l / 2, o / 2))));
+        return Math.min(b, Math.min(a, Math.min(l, Math.min(l, Math.min(o, n)))));
     }
 }
